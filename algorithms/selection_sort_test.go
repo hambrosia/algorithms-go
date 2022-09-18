@@ -29,5 +29,4 @@ func TestSelectionSort(t *testing.T) {
 	result = SelectionSort(test_input)
 	AssertEquals(t, result, expected)
 
-
 }
