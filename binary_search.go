@@ -30,7 +30,7 @@ The target is in the first or last index of the input. Log n comparisons must be
 Space Complexity:
 O(1)
 
-This implementation maintains integers for the lower and upper boundaries, and the middle value.
+This implementation maintains integers for the lower and upper boundaries and the middle value.
 The input array and target are passed by reference to avoid consuming additional memory.
 */
 
