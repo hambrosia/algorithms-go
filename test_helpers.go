@@ -2,10 +2,11 @@ package algorithms
 
 import (
 	"testing"
+	"reflect"
 )
 
-func assertEquals(t *testing.T, a int, b int) {
-	if a != b {
-		t.Errorf("Integer %v is not equal to %v", a, b)
+func assertEquals(t *testing.T, a interface{}, b interface{}) {
+	if !reflect.DeepEqual(a, b){
+		t.Errorf("%v is not equal to %v", a, b)
 	}
 }

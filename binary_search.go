@@ -2,7 +2,7 @@ package algorithms
 
 /*
 Purpose:
-Given a list of integers sorted in ascedning value and a target integer, return the index of the target integer, or -1 if the integer is not in the list.
+Given an array of integers sorted in ascedning value and a target integer, return the index of the target integer, or -1 if the integer is not in the array.
 
 Description:
 Set lower and upper boundaries to the full size of the input array (first and last indexes).
