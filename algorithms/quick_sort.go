@@ -40,8 +40,9 @@ However, since the function creates a complete sorted copy of the input and does
 Therefore, space complexity scales at a linear rate with the input.
 */
 
-func quickSort(nums []int) []int {
+func QuickSort(nums []int) []int {
 	if len(nums) < 2 {
+
 		return nums
 	}
 
@@ -58,8 +59,8 @@ func quickSort(nums []int) []int {
 		}
 	}
 
-	less = quickSort(less)
-	greater = quickSort(greater)
+	less = QuickSort(less)
+	greater = QuickSort(greater)
 
 	return append(append(less, equalto...), greater...)
 }

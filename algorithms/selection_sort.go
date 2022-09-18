@@ -23,7 +23,7 @@ This implementation does not sort in place and returns a new array.
 
 */
 
-func selectionSort(nums []int) []int {
+func SelectionSort(nums []int) []int {
 	ret := make([]int, 0)
 
 	for len(nums) > 0 {

@@ -2,6 +2,8 @@ package algorithms
 
 import (
 	"testing"
+
+	. "github.com/hambrosia/agorithms-golang/testhelpers"
 )
 
 func TestSelectionSort(t *testing.T) {
@@ -10,21 +12,21 @@ func TestSelectionSort(t *testing.T) {
 	test_input := []int{10, 1, 30, 5, 50, 3}
 	expected := []int{1, 3, 5, 10, 30, 50}
 
-	result := selectionSort(test_input)
-	assertEquals(t, result, expected)
+	result := SelectionSort(test_input)
+	AssertEquals(t, result, expected)
 
 	// Values are all the same
 	test_input = []int{11, 11, 11, 11, 11, 11}
 	expected = []int{11, 11, 11, 11, 11, 11}
 
-	result = selectionSort(test_input)
-	assertEquals(t, result, expected)
+	result = SelectionSort(test_input)
+	AssertEquals(t, result, expected)
 
 	// Values are alredy in order
 	test_input = []int{1, 3, 5, 10, 30, 50}
 	expected = []int{1, 3, 5, 10, 30, 50}
 
-	result = selectionSort(test_input)
-	assertEquals(t, result, expected)
+	result = SelectionSort(test_input)
+	AssertEquals(t, result, expected)
 
 }

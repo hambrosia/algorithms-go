@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Formatting and testing all go files"
+
+MODIFIED_GO_FILES=$(git diff --cached --name-only -- '*.go')
+
+if [[ $MODIFIED_GO_FILES == "" ]]; then
+    echo "No staged Go files"
+
+else
+    echo "Validating"
+    make validate
+fi

@@ -34,7 +34,7 @@ This implementation maintains integers for the lower and upper boundaries and th
 The input array and target are passed by reference to avoid consuming additional memory.
 */
 
-func binarySearch(nums *[]int, target *int) int {
+func BinarySearch(nums *[]int, target *int) int {
 	high_bound := len(*nums) - 1
 	low_bound := 0
 
