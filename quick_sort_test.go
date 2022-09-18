@@ -4,18 +4,24 @@ import (
 	"testing"
 )
 
-func TestSelectionSort(t *testing.T) {
-
+func TestQuickSort(t *testing.T) {
 	// Values are out of order, no duplicates
 	test_input := []int{10, 1, 30, 5, 50, 3}
 	expected := []int{1, 3, 5, 10, 30, 50}
 
-	result := selectionSort(test_input)
+	result := quickSort(test_input)
 	assertEquals(t, result, expected)
 
 	// Values are all the same
 	test_input = []int{11, 11, 11, 11, 11, 11}
 	expected = []int{11, 11, 11, 11, 11, 11}
+
+	result = quickSort(test_input)
+	assertEquals(t, result, expected)
+
+	// Values contain some duplicates
+	test_input = []int{10, 1, 30, 5, 50, 3, 5, 10}
+	expected = []int{1, 3, 5, 5, 10, 10, 30, 50}
 
 	result = selectionSort(test_input)
 	assertEquals(t, result, expected)
@@ -24,7 +30,6 @@ func TestSelectionSort(t *testing.T) {
 	test_input = []int{1, 3, 5, 10, 30, 50}
 	expected = []int{1, 3, 5, 10, 30, 50}
 
-	result = selectionSort(test_input)
+	result = quickSort(test_input)
 	assertEquals(t, result, expected)
-
 }
