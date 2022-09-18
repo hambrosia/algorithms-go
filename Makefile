@@ -5,3 +5,6 @@ format:
 
 validate: format
 	go test -v $(package)...
+
+add-hook:
+	git config core.hooksPath .githooks
