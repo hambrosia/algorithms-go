@@ -33,7 +33,7 @@ Space Complexity:
 O(n) linear
 
 This approach passes the input by value and creates new arrays for values less than, equal to, and greater than the pivot on each call to the function.
-Since the new arrays are filled with the value of a QuickSort call and the full return array is only assemebled once the base case is reached,
+Since the new arrays are filled with the value of a QuickSort call and the full return array is only assembled once the base case is reached,
 space complexity would appear to grow similarly to time complexity.
 
 However, since the function creates a complete sorted copy of the input and does not sort in place, the space complexity must be at least equal to the input.

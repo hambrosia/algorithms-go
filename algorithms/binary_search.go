@@ -2,7 +2,7 @@ package algorithms
 
 /*
 Purpose:
-Given an array of integers sorted in ascedning value and a target integer, return the index of the target integer, or -1 if the integer is not in the array.
+Given an array of integers sorted in ascending value and a target integer, return the index of the target integer, or -1 if the integer is not in the array.
 
 Description:
 Set lower and upper boundaries to the full size of the input array (first and last indexes).
@@ -14,7 +14,7 @@ Compare the middle value to the target value.
 If the target is found, return it.
 If the middle value is less than the target, discard all values that are less than the middle value (set new lower bound to mid plus one).
 If the middle value is greater than the target, discard all values that are greater than the middle value (set new higher bound to minus one).
-The new boundaries created are padded by one in the appropriate direction since the middle value has already been comapred to the target.
+The new boundaries created are padded by one in the appropriate direction since the middle value has already been compared to the target.
 The loops continues until the base case is satisfied (target found and returned, or boundaries meet and loop will not run).
 If the loop finishes without returning the value, the value was not found and Binary Search indicates this by returning -1.
 
@@ -42,11 +42,9 @@ func BinarySearch(nums *[]int, target *int) int {
 		mid := (low_bound + high_bound) / 2
 		if (*nums)[mid] == *target {
 			return mid
-		}
-		if (*nums)[mid] < *target {
+		} else if (*nums)[mid] < *target {
 			low_bound = mid + 1
-		}
-		if (*nums)[mid] > *target {
+		} else if (*nums)[mid] > *target {
 			high_bound = mid - 1
 		}
 	}
