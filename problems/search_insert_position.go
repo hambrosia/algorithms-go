@@ -2,7 +2,7 @@ package problems
 
 /*
 Problem Definition:
-Given an array of integegers sorted by ascending value and containing no duplicates,
+Given an array of integers sorted by ascending value and containing no duplicates,
 return the index of a target value.
 If the target value is not found, return the index at which it should be inserted.
 
@@ -13,7 +13,7 @@ The main logic of the iterative binary search is not changed.
 Instead, in the case that the element is not found, the return value is altered from -1 (not found),
 to use information left over from the binary search to determine the index at which the value should be inserted.
 
-The base case for the iterative binary search is when the low boundary of the examined sub-arry becomes greater than the high boundary.
+The base case for the iterative binary search is when the low boundary of the examined sub-array becomes greater than the high boundary.
 
 The last few steps before the base case is triggered help show why the low boundary will be the desired result
 in the case that the value is not in the array.
