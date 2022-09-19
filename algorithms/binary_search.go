@@ -42,11 +42,9 @@ func BinarySearch(nums *[]int, target *int) int {
 		mid := (low_bound + high_bound) / 2
 		if (*nums)[mid] == *target {
 			return mid
-		}
-		if (*nums)[mid] < *target {
+		} else if (*nums)[mid] < *target {
 			low_bound = mid + 1
-		}
-		if (*nums)[mid] > *target {
+		} else if (*nums)[mid] > *target {
 			high_bound = mid - 1
 		}
 	}
