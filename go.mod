@@ -1,3 +1,3 @@
-module github.com/hambrosia/agorithms-golang
+module github.com/hambrosia/algorithms-golang
 
 go 1.18
