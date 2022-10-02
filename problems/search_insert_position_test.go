@@ -1,8 +1,9 @@
 package problems
 
 import (
-	. "github.com/hambrosia/agorithms-golang/testhelpers"
 	"testing"
+
+	. "github.com/hambrosia/algorithms-golang/testhelpers"
 )
 
 func TestSearchInsertPosition(t *testing.T) {

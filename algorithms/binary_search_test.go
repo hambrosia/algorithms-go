@@ -3,7 +3,7 @@ package algorithms
 import (
 	"testing"
 
-	. "github.com/hambrosia/agorithms-golang/testhelpers"
+	. "github.com/hambrosia/algorithms-golang/testhelpers"
 )
 
 func TestBinarySearch(t *testing.T) {

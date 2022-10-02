@@ -1,4 +1,4 @@
-package = github.com/hambrosia/agorithms-golang
+package = github.com/hambrosia/algorithms-golang
 
 format:
 	go fmt $(package)...
