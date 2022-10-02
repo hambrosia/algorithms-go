@@ -2,15 +2,22 @@ package algorithms
 
 /*
 Purpose:
+Given a graph, determine if there is a path from one node to another.
+If there is a path, return the shortest path between the node.
 
 Description:
+Visit the first node and mark it as visited.
+For each neighbor node, mark it as visited. If it is not the target node, add its neighbor nodes to the list of nodes to check, and continue.
 
 Limitations:
+Doesn't work on weighted graphs. Doesn't work on undirected graphs.
 
 Time Complexity:
+O(V + E), in the worst case every vertex and edge must be traversed.
+
 
 Space Complexity:
-
+O(V), scales linearly with the number of vertices explored.
 */
 
 func BreadthFirstSearchBool(start int, end int, graph map[int][]int) bool {
