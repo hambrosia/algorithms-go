@@ -41,8 +41,8 @@ func BreadthFirstSearchPath(start int, end int, graph map[int][]int) []int {
 	queue := make([]int, 0)
 	queue = append(queue, start)
 
-	visited := make(map[int]bool)
 	parents := make(map[int]int)
+	parents[start] = -1
 
 	found := false
 
@@ -50,15 +50,13 @@ func BreadthFirstSearchPath(start int, end int, graph map[int][]int) []int {
 		node := queue[0]
 		queue = queue[1:]
 
-		visited[node] = true
-
 		if end == node {
 			found = true
 			break
 		}
 
-		for _, v := range graph[node] {
-			if _, ok := visited[v]; !ok {
+		for _, v := range QuickSort(graph[node]) {
+			if _, ok := parents[v]; !ok {
 				parents[v] = node
 				queue = append(queue, v)
 			}
@@ -67,7 +65,7 @@ func BreadthFirstSearchPath(start int, end int, graph map[int][]int) []int {
 
 	if found {
 		path := []int{end}
-		for node, ok := parents[end]; ok; node, ok = parents[node] {
+		for node, ok := parents[end]; ok && node != -1; node, ok = parents[node] {
 			path = append([]int{node}, path...)
 		}
 		return path
