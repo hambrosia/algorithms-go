@@ -1,7 +1,6 @@
 package problems
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -21,7 +20,6 @@ func AddBinary(a string, b string) string {
 		}
 
 		sum := a_val + b_val + carry
-		fmt.Printf("old result: %s\n", result)
 		switch sum {
 		case 0:
 			carry = 0
