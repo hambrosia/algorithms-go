@@ -19,4 +19,11 @@ func TestConvertTemperature(t *testing.T) {
 	expected = []float64{395.26000, 251.79800}
 	result = ConvertTemperature(input)
 	AssertEquals(t, result, expected)
+
+	// Example 3
+	input = 13
+	expected = []float64{286.15, 55.400000000000006}
+	result = ConvertTemperature(input)
+	AssertEquals(t, result, expected)
+
 }
