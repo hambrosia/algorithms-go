@@ -92,7 +92,7 @@ func (s1 *Set) Difference(s2 *Set) *Set {
 	return &diff
 }
 
-// Returns s1 Δ s2, the members union of the members of s1 that are not in s2 and the members of s2 that are not in s1
+// Returns s1 Δ s2, the union of the members of s1 that are not in s2 and the members of s2 that are not in s1
 func (s1 *Set) SymmetricDifference(s2 *Set) *Set {
 	s1.mu.RLock()
 	s2.mu.RLock()
